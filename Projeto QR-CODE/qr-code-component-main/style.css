@@ -1,69 +1,57 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Titillium+Web&display=swap');
-body{
-    background-color: hsl(212, 45%, 89%);
-    font-family: 'Outfit', sans-serif;
-}
-section{
-    background-color: hsl(0, 0%, 100%);
-}
-h1{
-    text-align: center;
-    color: hsl(218, 44%, 22%);
-    margin: 0px;
-    font-weight: 700;
-}
-p{
-    text-align: center;
-    font-size: 15px;
-    color: hsl(220, 15%, 55%);
-    margin: 0px;
-    font-weight: 400;
-}
-img{
-    border-radius: 5%;
-}
-@media only screen and (max-width: 1440px){
-    img{
-        margin-top: 5%;
-        width: 90%;
-    }
-    body{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-    }
-    section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 300px;
-        box-shadow: 1px 1px 10px hsl(212, 45%, 89%);
-        border-radius: 5%;
-    }
-    div#texto{
-        padding: 12px;
-    }
+
+:root{
+    --cor0: hsl(0, 0%, 100%);
+    --cor1: hsl(212, 45%, 89%);
+    --cor2: hsl(220, 15%, 55%);
+    --cor3: hsl(218, 44%, 22%);
+    --fonte: 'Outfit', sans-serif;
 }
 
-@media only screen and(max-width: 375px){
-    img{
-        margin-top: 5%;
-        width: 90%;
-    }
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    section{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 300px;
-        box-shadow: 1px 1px 10px hsl(212, 45%, 89%);
-        border-radius: 5%;
-    }
-    div#texto{
-        padding: 12px;
-    }
+body{
+    background-color: var(--cor1);
+}
+
+main{
+    position: relative;
+    height: 95vh;
+}
+
+section{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--cor0);
+    width: 300px;
+
+    text-align: center;
+    font-family: var(--fonte);
+
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+    padding: 15px 20px 20px 20px;
+}
+
+section figure{
+    margin: 0px;
+}
+
+section figure img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+section h1{
+    font-weight: 700;
+    color: var(--cor3);
+}
+
+section p{
+    color: var(--cor2);
+    font-size: 15px;
+    font-weight: 400;
+    margin: 20px;
 }
