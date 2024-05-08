@@ -23,6 +23,11 @@
     --fonte2: Outfit, sans-serif;
 }
 
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body{
     background-color: var(--neutral2);
 }
@@ -35,10 +40,6 @@ main{
     padding: 50px;
 }
 
-main figure{
-    margin: 0;
-}
-
 main figure img{
     max-width: 100%;
     border-radius: 10px;
@@ -47,18 +48,21 @@ main figure img{
 main h1{
     font-family: var(--fonte1);
     font-weight: normal;
+    margin: 1em 0;
 }
 
 main p{
     font-family: var(--fonte2);
     font-size: 16px;
     font-weight: normal;
+    margin-bottom: 2em;
 }
 
 main section{
     background-color: var(--neutral1);
     border-radius: 20px;
     padding: 20px 20px 20px 30px;
+    margin-bottom: 30px;
 }
 
 main li{
@@ -66,20 +70,30 @@ main li{
     margin: 10px;
     padding-left: 20px;
 }
+
+main li p{
+    margin: 0;
+}
+
+main li::marker{
+    color: var(--primary0);
+    font-weight: 700;
+}
+
 main ul{
     padding: 0px;
-    margin: 10px;
+    margin: 10px;    
 }
 
 main section h2{
     color: var(--primary1);
     font-family: var(--fonte2);
     font-weight: 600;
-    margin-left: 0px;
+    margin-bottom: 0.5em;
 }
 
 hr{
-    margin: 34px 0px;
+    margin: 2em 0;
 }
 
 main > h2{
@@ -87,4 +101,44 @@ main > h2{
     font-family: var(--fonte1);
     font-size: 2em;
     font-weight: 400;
+    margin-bottom: 1em;
+}  
+
+table{
+    width: 100%;
+    padding-left: 20px;
+    font-family: var(--fonte2);
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.47);
+}
+
+tr.ultimo{
+    border: none;
+}
+
+td{ 
+    padding: 15px 30px;
+}   
+
+td span{
+    color: var(--primary0);
+    font-weight: 700;
+}
+
+@media (max-width: 700px) {
+    main{
+        margin: 0;
+    }
+
+    main figure{
+        margin: -50px;
+        margin-bottom: 0px;
+    }
+    
+    main figure img{
+        border-radius: 0px;
+    }
 }
