@@ -20,7 +20,7 @@
 body{
     font-family: var(--font0);
     background-color: var(--primary);
-    padding: 15px;
+    padding: 20px;
 }
 
 body p{
