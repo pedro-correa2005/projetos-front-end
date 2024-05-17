@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@font-face {
+    font-family: "Work Sans";
+    src: url(assets/fonts/WorkSans-VariableFont_wght.ttf) format("truetype");
+}
+
+:root{
+    --cor1: hsl(0, 0%, 100%);
+    --cor2: hsl(275, 100%, 97%);
+    --cor3: hsl(292, 16%, 49%);
+    --cor4: hsl(292, 42%, 14%);
+    --cor5: rgba(140, 105, 145, 0.8);
+    --font: "Work Sans", Arial, Helvetica, sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font);
+}
+
+body{
+    background: var(--cor2) url(assets/images/background-pattern-desktop.svg) no-repeat;
+}
+
+main{
+    background: var(--cor1);
+    max-width: 600px;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+main h1{
+    display: inline-block;
+    font-size: 3.5em;
+    margin-left: 10px;
+    color: var(--cor4);
+}
+
+
+main div#title{
+    margin: 30px 0;
+}
+
+main h2{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.12em;
+}
+
+main h2:hover{
+    cursor: pointer;
+    color: var(--cor3);
+}
+
+main h2:active{
+    color: var(--cor4);
+}
+
+main p{
+    display:none;
+    font-weight: 500;
+    color: var(--cor5);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+main hr{
+    border-top: 1px;
+}
+
+@media (max-width: 660px){
+    body{
+        background:var(--cor2) url(assets/images/background-pattern-mobile.svg) no-repeat;
+        background-size: contain;
+    }
+    main{
+        margin: 200px 25px;
+    }
+}
