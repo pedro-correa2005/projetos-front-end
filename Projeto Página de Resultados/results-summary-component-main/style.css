@@ -1,0 +1,205 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format("truetype");
+}
+
+:root{
+    --primary0: hsl(0, 100%, 67%);
+    --primary1: hsl(39, 100%, 56%);
+    --primary2: hsl(166, 100%, 37%);
+    --primary3: hsl(234, 85%, 45%);
+
+    --primary00: hsla(0, 100%, 67%, 0.1);
+    --primary01: hsla(39, 100%, 56%, 0.1);
+    --primary02: hsla(166, 100%, 37%, 0.1);
+    --primary03: hsla(234, 85%, 45%, 0.1);
+
+    --gradient0: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --gradient1: linear-gradient(to top,hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    --gradient2: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+
+    --neutral0: white;
+    --neutral1: hsl(221, 100%, 96%);
+    --neutral2: hsl(241, 100%, 89%);
+    --neutral3: hsl(224, 30%, 27%);
+    --neutral4: hsl(241, 29%, 72%);
+
+    --font: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-family: var(--font);
+    background: var(--gradient2) no-repeat;
+    background-size: cover;
+}
+
+main{
+    margin: auto;
+    background-color: var(--neutral0);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+main section#result{
+    text-align: center;
+    background: var(--gradient0);
+    color: var(--neutral0);
+    padding: 20px 30px;
+    border-end-start-radius: 30px;
+    border-end-end-radius: 30px ;
+}
+
+main section#result h1{
+    color: var(--neutral2);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+main section#result div{
+    background: var(--gradient1);
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+main section#result div h2{
+    font-size: 3em;
+}
+
+main section#result > h2{
+    font-size: 1.25em;
+    margin: 1em 0 0.5em 0;
+}
+
+main section#result > p{
+    font-size: 18px;
+    margin-bottom: 1em;
+    color: var(--neutral2);
+}
+
+main section#summary{
+    padding: 20px 30px;
+}
+
+main section#summary h2{
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+main section#summary div.bloco{
+    padding: 15px 10px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+main section#summary div.points{
+    font-weight: 800;
+    color: var(--neutral3);
+}
+main section#summary span.point{
+    margin-right: 5px;
+}
+main section#summary span.fraction{
+    color: var(--neutral4);
+}
+
+main section#summary div.bloco div.type{
+    font-size: 18px;
+    display: flex;
+}
+main section#summary div.bloco div.type img{
+    margin: 0 10px;
+}
+
+main section#summary div#reaction{
+    background-color: var(--primary00);
+}
+main section#summary div#reaction div.type{
+    color: var(--primary0);
+    font-weight: 700;
+}
+
+main section#summary div#memory{
+    background-color: var(--primary01);
+}
+main section#summary div#memory div.type{
+    color: var(--primary1);
+    font-weight: 700;
+}
+
+main section#summary div#verbal{
+    background-color: var(--primary02);
+}
+main section#summary div#verbal div.type{
+    color: var(--primary2);
+    font-weight: 700;
+}
+
+main section#summary div#visual{
+    background-color: var(--primary03);
+}
+main section#summary div#visual div.type{
+    color: var(--primary3);
+    font-weight: 700;
+}
+
+main section#summary a{
+    display: block;
+    text-decoration: none;
+    color: var(--neutral0);
+    background-color: var(--neutral3);
+    text-align: center;
+    padding: 15px;
+    border-radius: 40px;
+}
+
+main section#summary a:hover{
+    background: var(--gradient0);
+}
+
+@media screen and (min-width: 540px) {
+    body{
+        margin-top: 60px;
+        width: 98vw;
+        height: 84vh;
+    }
+    main{
+        max-width: 600px;
+        display: flex;
+    }
+    section#result{
+        max-width: 40%;
+        border-radius: 30px;
+    }
+    section#summary{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main{
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    footer{
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+}
