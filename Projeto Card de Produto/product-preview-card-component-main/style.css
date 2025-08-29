@@ -3,7 +3,6 @@
 @font-face {
     font-family: Montserrat;
     src: url(assests/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
-    font-weight: 500, 700;
 }
 
 @font-face {
@@ -23,3 +22,140 @@
     --font1: Fraunces;
 }
 
+body{
+    display: flex;
+    justify-content: center;
+    background: var(--neutral2);
+}
+
+main{
+    display: inline-flex;
+    background: var(--neutral3);
+    max-width: 41vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+picture{
+    background-image: url(assests/images/image-product-desktop.jpg);
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 0px 0px 10px;
+}
+div{
+    width: 50%;
+}
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 18px 33px;
+    height: 92%;
+}
+
+section>*{
+    margin: 10px 0;
+}
+
+.category{
+    font-family: var(--font0);
+    font-weight: 500;
+    color: var(--neutral1);
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
+h1{
+   font-family: var(--font1);
+   color: var(--neutral0);
+   font-size: 33px;
+   line-height: 100%;
+}
+
+.description{
+    font-family: var(--font0);
+    font-weight: 500;
+    color: var(--neutral1);
+    line-height: 150%;
+    font-size: 14px;
+}
+
+.preco{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; 
+}
+
+.newprice{
+    font-family: var(--font1);
+    color: var(--primary0);
+    font-size: 35px;
+}
+
+.originalprice{
+    font-family: var(--font0);
+    font-size: 14px;
+    color: var(--neutral1);
+    padding-left: 10px;
+    text-decoration: line-through;
+}
+
+.button{
+    font-family: var(--font0);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: var(--primary0);
+    color: var(--neutral2);
+    padding: 15px 0;
+    border-radius: 10px;
+    text-align: center;
+}
+.button:before{
+    content: url("assests/images/icon-cart.svg");
+    padding-right: 10px;
+}
+.button:hover{
+    background-color: var(--primary1);
+}
+
+footer{
+    position: absolute;
+    bottom: 1px;
+}
+
+@media screen and (max-width: 1023px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        max-width: 60vw;
+        height: 80vh;
+    }
+    div{
+       width: 60vw; 
+    }
+    picture{
+        background-image: url(assests/images/image-product-mobile.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    main{
+        max-width: 93vw;
+    }
+    div{
+       width: 93vw; 
+    }
+}
