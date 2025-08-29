@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: Montserrat;
+    src: url(assests/fonts/Montserrat-VariableFont_wght.ttf) format("truetype");
+    font-weight: 500, 700;
+}
+
+@font-face {
+    font-family: Fraunces;
+    src: url(assests/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format("truetype");
+    font-weight: 700;
+}
+
+:root{
+    --primary0: hsl(158, 36%, 37%);
+    --primary1: hsl(158, 42%, 18%);
+    --neutral0: hsl(212, 21%, 14%);
+    --neutral1: hsl(228, 12%, 48%);
+    --neutral2: hsl(30, 38%, 92%);
+    --neutral3: hsl(0, 0%, 100%);
+    --font0: Montserrat;
+    --font1: Fraunces;
+}
+
