@@ -35,7 +35,30 @@ main{
     box-shadow: 0px 30px 3px 15px var(--neutral1), 0px 25px 3px 40px var(--neutral2);
 }
 
+main a{
+    text-decoration: none;
+}
+
+main a:hover h1{
+    color: var(--primary1);
+}
+
+main img:hover{
+    opacity: 0.2;
+}
+
+.fundo{
+    background-image: url(assets/images/icon-view.svg);
+    background-size: 20% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--primary1);
+    border-radius: 9px;
+}
+
 img{
+    display: block;
+    background-color: var(--primary1);
     max-width: 100%;
     border-radius: 9px;
 }
@@ -105,8 +128,26 @@ p.creator{
     color: var(--primary0);
 }
 
-span{
+p.creator::before{
+  content: "";
+  display: inline-block;
+  background-image: url("assets/images/image-avatar.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 30px; 
+  height: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+
+p.creator a{
     color: var(--neutral4);
+}
+
+p.creator a:hover{
+    color: var(--primary1);
 }
 
 @media screen and (max-width: 1024px){
