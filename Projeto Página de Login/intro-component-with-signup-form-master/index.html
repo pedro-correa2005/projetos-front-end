@@ -14,6 +14,7 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <script src="script.js"></script>
 </head>
 <body>
   
@@ -29,14 +30,22 @@
     <section>
       <p class="trial"><strong>Try it free 7 days</strong> then $20/mo. thereafter</p>
       <div class="formulario">  
-        <form action="">
-          <input type="text" name="" id="" placeholder="First Name"></input>
-          <input type="text" name="" id="" placeholder="Last Name"></input>
-          <input type="email" name="" id="" placeholder="Email Address"></input>
-          <input type="password" name="" id="" placeholder="Password"></input>
-          <input type="submit" value="CLAIM YOUR FREE TRIAL"></input>
+        <form onsubmit="return false" novalidate>
+          <input type="text" name="firstName" id="firstName" placeholder="First Name"></input>
+          <label for="firstName" id="lblFirstName">First Name cannot be empty</label>
+        
+          <input type="text" name="lastName" id="lastName" placeholder="Last Name"></input>
+          <label for="lastName" id="lblLastName">Last Name cannot be empty</label>
+
+          <input type="email" name="email" id="email" placeholder="Email Address"></input>
+          <label for="email" id="lblEmail">Looks like it's not an email</label>
+
+          <input type="password" name="password" id="password" placeholder="Password"></input>
+          <label for="password" id="lblPassword">Password cannot be empty</label>
+
+          <input type="submit" value="CLAIM YOUR FREE TRIAL" onclick="enviar()"></input>
         </form>
-        <p>By clicking the button, you are agreeing to our <strong>Terms and Services</strong></p>
+        <p>By clicking the button, you are agreeing to our <strong><a href="">Terms and Services</a></strong></p>
       </div>
     </section>
 
@@ -45,7 +54,7 @@
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/pedro-correa2005" target="_blank">Pedro Corrêa</a>.
     </p>
   </footer>
 </body>

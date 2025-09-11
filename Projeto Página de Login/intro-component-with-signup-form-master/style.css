@@ -6,6 +6,11 @@
 }
 @font-face {
     font-family: Poppins;
+    font-style: italic;
+    src: url(assets/fonts/Poppins/Poppins-SemiBoldItalic.ttf);
+}
+@font-face {
+    font-family: Poppins;
     font-weight: 500;
     src: url(assets/fonts/Poppins/Poppins-Medium.ttf);
 }
@@ -109,9 +114,17 @@ form input{
     margin: 0;
     border-radius: 5px;
     border: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 5%;
 }
 
-form input[type="submit"]{
+input.red::placeholder{
+    color: var(--primary0);
+    font-weight: 700;
+}
+
+form input[type="submit"]{  
+    padding: 0;
+    width: 90%;
     background-color: var(--primary1);
     height: 45px;
     color: white;
@@ -122,6 +135,21 @@ form input[type="submit"]{
     box-shadow: 0px 4px 0px 0px hsl(154, 58%, 44%);
 }
 
+form input[type="submit"]:active{
+    background-color:  hsla(154, 59%, 51%, 0.404);
+}
+
+label{
+    display: none;
+    width: 90%;
+    text-align: right;
+    font-size: 10px;
+    font-family: Poppins;
+    font-style: italic;
+    color: var(--primary0);
+    margin-bottom: 10px;
+}
+
 div.formulario > p {
     color: var(--neutral1);
     text-align: center;
@@ -129,8 +157,9 @@ div.formulario > p {
     margin: 0;
 }
 
-div.formulario > p > strong{
+div.formulario > p > strong > a{
     color: var(--primary0);
+    text-decoration: none;
 }
 
 footer{
@@ -138,4 +167,33 @@ footer{
     bottom: 0px;
     width: 100%;
     text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    main{
+        width: 95vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main{
+        display: block;
+        position: relative;
+        margin: auto;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 0%);
+    }
+
+    section{
+        width: 100%;
+    }
+
+    h1, p{
+        text-align: center;
+    }
+
+    footer{
+        position: relative;
+    }
 }
