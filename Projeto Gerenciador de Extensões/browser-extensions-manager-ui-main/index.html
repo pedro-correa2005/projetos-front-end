@@ -18,22 +18,25 @@
 <body>
   <header>
     <img src="assets/images/logo.svg">
-    <label for="theme"><img src="assets/images/icon-moon.svg"></label>
+    <label for="theme"></label>
     <input type="checkbox" role="switch" value="light dark" name="theme" id="theme"></input>
   </header>
+  <section>
+    
+    <h1>Extensions List</h1>
+    
+    <div class="filters">
+      <input type="radio" name="filter" value="allFilter" id="allFilter" checked>
+      <label for="allFilter">All</label>
+      <input type="radio" name="filter" value="activeFilter" id="activeFilter">
+      <label for="activeFilter">Active</label>
+      <input type="radio" name="filter" value="inactiveFilter" id="inactiveFilter">
+      <label for="inactiveFilter">Inactive</label>
+    </div>
+    
+  </section>
 
   <main id="mainContainer">
-    <h1>Extensions List</h1>
-  
-    <input type="radio" name="filter" value="allFilter" id="allFilter">
-    <label for="allFilter">All</label>
-
-    <input type="radio" name="filter" value="activeFilter" id="activeFilter">
-    <label for="activeFilter">Active</label>
-
-    <input type="radio" name="filter" value="inactiveFilter" id="inactiveFilter">
-    <label for="inactiveFilter">Inactive</label>
-
   </main>
 
   <footer class="attribution">
