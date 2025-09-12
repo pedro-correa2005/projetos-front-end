@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
   
   <title>Frontend Mentor | Browser extensions manager UI</title>
 
@@ -18,15 +19,20 @@
   <header>
     <img src="assets/images/logo.svg">
     <label for="theme"><img src="assets/images/icon-moon.svg"></label>
-    <input type="checkbox" role="switch" id="theme"></input>
+    <input type="checkbox" role="switch" value="light dark" name="theme" id="theme"></input>
   </header>
 
   <main id="mainContainer">
     <h1>Extensions List</h1>
   
-    <button>All</button>
-    <button>Active</button>
-    <button>Inactive</button>
+    <input type="radio" name="filter" value="allFilter" id="allFilter">
+    <label for="allFilter">All</label>
+
+    <input type="radio" name="filter" value="activeFilter" id="activeFilter">
+    <label for="activeFilter">Active</label>
+
+    <input type="radio" name="filter" value="inactiveFilter" id="inactiveFilter">
+    <label for="inactiveFilter">Inactive</label>
 
   </main>
 

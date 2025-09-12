@@ -23,8 +23,14 @@ function loadContent(){
                 const lblChk = document.createElement('label');
                 lblChk.classList.add('switch')
 
+                const btnRemove = document.createElement('button')
+                btnRemove.textContent = "Remove"
+                btnRemove.classList.add("btnRemove");
+                cardDiv.appendChild(btnRemove);
+
                 const inputChk = document.createElement('input');
                 inputChk.type = 'checkbox'
+                inputChk.checked = item.isActive;
                 lblChk.appendChild(inputChk);
 
                 const spanChk = document.createElement('span');

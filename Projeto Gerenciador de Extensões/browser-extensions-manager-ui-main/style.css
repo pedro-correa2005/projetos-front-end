@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Noto Sans;
+    src: url(assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf) format('true-type');
+}
+
+:root{
+    
+    --gradient: linear-gradient(180deg, light-dark(#EBF2FC, #040918 ) 0%, light-dark(#EEF8F9, #091540) 100%);
+
+    --neutral900: hsl(227, 75%, 14%);
+    --neutral800: hsl(226, 25%, 17%);
+    --neutral700: hsl(225, 23%, 24%);
+    --neutral600: hsl(226, 11%, 37%);
+    --neutral300: hsl(0, 0%, 78%);
+    --neutral200: hsl(217, 61%, 90%);
+    --neutral100: hsl(0, 0%, 93%);
+    --neutral0: hsl(200, 60%, 99%);
+
+    --red400: hsl(3, 86%, 64%);
+    --red500: hsl(3, 71%, 56%);
+    --red700: hsl(3, 77%, 44%);
+
+
+}
+
+:root{
+    &:has(input[name="theme"][value="light dark"]:checked){
+        color-scheme: dark;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Noto Sans;
+}
+
+html{
+    background: var(--gradient);
+}
+
+header{
+    background-color: light-dark(var(--neutral0), var(--neutral800));
+}
+
+h1, h2{
+    color: light-dark(var(--neutral900), var(--neutral0));
+}
+
+main > label{
+    background-color: light-dark(var(--neutral0), var(--neutral800));
+    color: light-dark(var(--neutral900), var(--neutral0));
+}
+
+main > input[type="radio"]:checked + label{
+    background-color: var(--red700);
+    color: var(--neutral0);
+}
+
+p{
+    color: light-dark(var(--neutral600), var(--neutral300));
+}
+
+div.card{
+    background-color: light-dark(var(--neutral0), var(--neutral800));
+    border: 1px solid var(--neutral0);
+}
+
+button.btnRemove{
+    background-color: light-dark(var(--neutral0), var(--neutral800));
+    border: 1px solid light-dark(var(--neutral600), var(--neutral300));
+}
