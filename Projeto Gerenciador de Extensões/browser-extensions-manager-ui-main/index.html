@@ -26,11 +26,11 @@
     <h1>Extensions List</h1>
     
     <div class="filters">
-      <input type="radio" name="filter" value="allFilter" id="allFilter" checked>
+      <input type="radio" name="filter" value="allFilter" id="allFilter" onclick="filter()" checked>
       <label for="allFilter">All</label>
-      <input type="radio" name="filter" value="activeFilter" id="activeFilter">
+      <input type="radio" name="filter" value="activeFilter" id="activeFilter" onclick="filter()">
       <label for="activeFilter">Active</label>
-      <input type="radio" name="filter" value="inactiveFilter" id="inactiveFilter">
+      <input type="radio" name="filter" value="inactiveFilter" id="inactiveFilter" onclick="filter()">
       <label for="inactiveFilter">Inactive</label>
     </div>
     
@@ -41,7 +41,7 @@
 
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/pedro-correa2005" target="_blank">Pedro Corrêa</a>.
   </footer>
 
   <script src="script.js"></script>
