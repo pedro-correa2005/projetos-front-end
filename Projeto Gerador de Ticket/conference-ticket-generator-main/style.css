@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: Inconsolata;
+    src: url(assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+}
+
+:root{
+    --neutral0: hsl(0, 0%, 100%);
+    --neutral300: hsl(252, 6%, 83%);
+    --neutral500: hsl(245, 15%, 58%);
+    --neutral700: hsl(245, 19%, 35%);
+    --neutral900: hsl(248, 70%, 10%);
+
+    --orange500: hsl(7, 88%, 67%);
+    --orange700: hsl(7, 71%, 60%);
+    --gradient: linear-gradient(to right,  hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Inconsolata;
+}
+
