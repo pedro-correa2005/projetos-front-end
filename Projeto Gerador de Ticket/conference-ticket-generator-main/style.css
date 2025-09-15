@@ -23,3 +23,18 @@
     font-family: Inconsolata;
 }
 
+html{
+    background-image: url(assets/images/background-desktop.png);
+    background-size: cover;
+}
+
+body{
+    background:
+        url(assets/images/pattern-lines.svg) center fixed,
+        url(assets/images/pattern-circle.svg) no-repeat fixed,
+        url(assets/images/pattern-circle.svg) no-repeat right fixed,
+        url(assets/images/pattern-squiggly-line-bottom-desktop.svg) no-repeat left bottom fixed,
+        url(assets/images/pattern-squiggly-line-top.svg) no-repeat right top fixed;
+    
+    height: 200vh;
+}
