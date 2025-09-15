@@ -2,53 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Conference ticket generator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <header>
+    <img src="assets/images/logo-full.svg" alt="">
+  </header>
+  <main>
+    <section id="form">
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p>Secure your spot at next year's biggest coding conference.</p>
+      <form action="">
+      
+        <p>Upload Avatar</p>
+        <div id="drop-zone">
+          <input type="file" id="file-input" placeholder="">
+          <p>Drag and drop or click to upload</p>
+        </div>
+        <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+        <label for="name">Full Name</label>
+        <input type="text" name="email" id="name">
+        <label for="email">Email Address</label>
+        <input type="email" name="email" placeholder="example@email.com">
+        <label for="username">GitHub Username</label>
+        <input type="text" name="username" id="username">
+        <input type="submit" value="Generate My Ticket">
+      </form>
+    </section>
+    <section id="response">    
+      <h1>Congrats, <span><!-- Full Name -->!</span> Your ticket is ready.</h1>
+    
+      <p>We've emailed your ticket to <span><!-- Email Address --></span> and will send updates in the run up to the event.</p>
+      <div id="ticket">
+        <h2>Coding Conf</h2>
+        <p id="info">Jan 31, 2025 / Austin, TX</p>
+        <img src="assets/images/image-avatar.jpg" alt="">
+        <p>Jonatan Kristof</p>
+        <p>@jonatankristof0101</p>
+        <p>#01609</p>
+      </div>
+    </section>
+  </main>
 
-  <!-- Form starts -->
-
-  Your Journey to Coding Conf 2025 Starts Here!
-
-  Secure your spot at next year's biggest coding conference.
-
-  Upload Avatar
-  Drag and drop or click to upload
-  Upload your photo (JPG or PNG, max size: 500KB).
-
-  Full Name
-
-  Email Address
-  example@email.com
-
-  GitHub Username
-  @yourusername
-
-  Generate My Ticket
-
-  <!-- Form ends -->
-
-  <!-- Generated tickets starts -->
-
-  Congrats, <!-- Full Name -->! Your ticket is ready.
-
-  We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
-
-  Coding Conf
-  Jan 31, 2025 / Austin, TX
-
-  <!-- Generated tickets ends -->
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
