@@ -15,47 +15,67 @@
 </head>
 <body>
   <header>
-    <img src="assets/images/logo-full.svg" alt="">
+    <a href=""><img src="assets/images/logo-full.svg"></a>
   </header>
   <main>
     <section id="form">
       <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-      <p>Secure your spot at next year's biggest coding conference.</p>
+      <p class="darkertext">Secure your spot at next year's biggest coding conference.</p>
       <form action="">
       
         <p>Upload Avatar</p>
-        <div id="drop-zone">
-          <input type="file" id="file-input" placeholder="">
-          <p>Drag and drop or click to upload</p>
+        <input type="file" id="file-input" placeholder="">
+        <label for="file-input" id="drop-zone">
+          <img src="assets/images/icon-upload.svg">
+          <p class="darkertext">Drag and drop or click to upload</p>
+        </label>
+        <div id="uploadInfo">
+          <img src="assets/images/icon-info.svg">
+          <p class="darkertext">Upload your photo (JPG or PNG, max size: 500KB).</p>
         </div>
-        <p>Upload your photo (JPG or PNG, max size: 500KB).</p>
+        
         <label for="name">Full Name</label>
         <input type="text" name="email" id="name">
+
         <label for="email">Email Address</label>
         <input type="email" name="email" placeholder="example@email.com">
+
         <label for="username">GitHub Username</label>
-        <input type="text" name="username" id="username">
+        <input type="text" name="username" id="username" placeholder="@yourusername">
+
         <input type="submit" value="Generate My Ticket">
       </form>
     </section>
+
     <section id="response">    
-      <h1>Congrats, <span><!-- Full Name -->!</span> Your ticket is ready.</h1>
+      <h1>Congrats, <span id="nameSpan">Jonatan Kristof!</span> Your ticket is ready.</h1>
     
-      <p>We've emailed your ticket to <span><!-- Email Address --></span> and will send updates in the run up to the event.</p>
+      <p class="darkertext">We've emailed your ticket to <span id="emailSpan">jonatan@email.com</span> and will send updates in the run up to the event.</p>
+
       <div id="ticket">
-        <h2>Coding Conf</h2>
-        <p id="info">Jan 31, 2025 / Austin, TX</p>
-        <img src="assets/images/image-avatar.jpg" alt="">
-        <p>Jonatan Kristof</p>
-        <p>@jonatankristof0101</p>
-        <p>#01609</p>
+        <div id="leftTop">
+          <img src="assets/images/logo-mark.svg">
+          <h2>Coding Conf</h2>
+          <p class="darkertext">Jan 31, 2025 / Austin, TX</p>
+        </div>
+        
+        <div id="right">
+          <p>#01609</p>
+        </div>
+
+        <div id="leftBottom">
+          <img src="assets/images/image-avatar.jpg" alt="">
+          <h2>Jonatan Kristof</h2>
+          <p>@jonatankristof0101</p>
+        </div>
+
       </div>
     </section>
   </main>
 
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
 </body>
 </html>

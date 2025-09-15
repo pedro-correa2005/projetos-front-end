@@ -26,15 +26,170 @@
 html{
     background-image: url(assets/images/background-desktop.png);
     background-size: cover;
+    height: 100vh;
 }
 
 body{
+    height: 100vh;
+
     background:
         url(assets/images/pattern-lines.svg) center fixed,
         url(assets/images/pattern-circle.svg) no-repeat fixed,
         url(assets/images/pattern-circle.svg) no-repeat right fixed,
         url(assets/images/pattern-squiggly-line-bottom-desktop.svg) no-repeat left bottom fixed,
         url(assets/images/pattern-squiggly-line-top.svg) no-repeat right top fixed;
-    
-    height: 200vh;
+}
+
+header{
+    max-width: 210px;
+    margin: auto;
+    padding-top: 20px;
+}
+
+h1{
+    margin: 30px 0;
+    font-size: 3em;
+}
+
+h1, h2, p, label{
+    color: var(--neutral0);
+}
+
+.darkertext{
+    color: var(--neutral500);
+}
+
+main{
+    max-width: 60vw;
+    margin: 30px auto;
+    text-align: center;
+}
+
+form{
+    margin: 20px auto;
+    max-width: 50%;
+    text-align: left;
+}
+
+input{
+    color: var(--neutral0);
+    display: block;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 98%;
+    height: 40px;
+    padding-left: 2%;
+    border: solid 1px var(--neutral500);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+input#file-input{
+    display: none;
+}
+
+label#drop-zone{
+    border: 2px dashed var(--neutral500);
+    border-radius: 12px;
+    min-height: 100px;
+    padding: 5px;
+    margin: 10px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+label#drop-zone img{
+    background-color: var(--neutral700);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+div#uploadInfo{
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+div#uploadInfo p{
+    margin-left: 10px;
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 0;
+    border: none;
+    background-color: var(--orange700);
+    color: var(--neutral900);
+    font-weight: 800;
+    cursor: pointer;
+}
+
+input[type="submit"]:active{
+    background-color: var(--orange500);
+}
+
+section#form{
+    display: none;
+}
+
+section#response{
+    max-width: 70%;
+    margin: auto;
+}
+
+section#response > p{
+    width: 50%;
+    margin: auto;
+}
+
+span#nameSpan{
+    background-image: var(--gradient);
+    background-clip: text;
+    color: transparent;
+}
+
+span#emailSpan{
+    color: var(--orange500);
+}
+
+div#ticket{
+    width: 600px;
+    height: 280px;
+    margin: auto;
+    margin-top: 20px;
+    background-image: url(assets/images/pattern-ticket.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+}
+
+div#leftTop, div#leftBottom{
+    grid-column: span 2;
+}
+
+div#leftTop img, div#leftBottom img{
+    grid-row: span 2;
+}
+
+div#leftTop h2, div#leftBottom h2{
+    grid-column: span 2;
+}
+
+div#right{
+    grid-row: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+div#right p{
+    color: var(--neutral500)
 }
